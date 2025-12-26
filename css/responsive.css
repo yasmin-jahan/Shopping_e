@@ -405,6 +405,13 @@
 .mobile_nav_header {
     padding: 15px 20px;
 }
+.header_nav {
+    width: 100%;
+    left: -100%;
+}
+.header_mobile_nav_active{
+    left: 0;
+}
     /* header-section-ends */
 
     /* hero-section-starts */
