@@ -43,6 +43,7 @@ $(document).ready(function () {
   MatchHeight();
 
   //bubble
+  if (document.getElementById("particles-js")) {
   particlesJS("particles-js", {
     particles: {
       number: { value: 20 },
@@ -68,6 +69,17 @@ $(document).ready(function () {
       }
     }
   });
+}
+  
+    //scroll_header
+  window.addEventListener("scroll", function() {
+  const header = document.querySelector(".header_section");
+  if (window.scrollY > 30) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+});
 
 
   //menu
@@ -90,5 +102,7 @@ $(document).ready(function () {
       document.querySelector(".black_overlay").style.display = "none";
     });
 
+
+  
 
 });
