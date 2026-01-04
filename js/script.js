@@ -103,6 +103,44 @@ $(document).ready(function () {
     });
 
 
-  
+  // product-details-slider
+  var swiper = new Swiper(".product_details_mySwiper", {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".product_details_mySwiper2", {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".product_details_next",
+        prevEl: ".product_details_prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
 
 });
+
+function updateCartCount() {
+  const cartCountEl = document.querySelector(".cart_item_count");
+  if (!cartCountEl) return;
+
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let totalQty = 0;
+  cart.forEach(item => {
+    totalQty += item.quantity;
+  });
+
+  if (totalQty > 0) {
+    cartCountEl.textContent = totalQty;
+    cartCountEl.style.visibility = "visible";
+  } else {
+    cartCountEl.style.visibility = "hidden";
+  }
+}
+
+// Run on every page load
+document.addEventListener("DOMContentLoaded", updateCartCount);
