@@ -470,7 +470,7 @@
         height: 380px;
     }
 
-    .featured_img {
+    .featured_img img{
         object-position: top;
     }
 
