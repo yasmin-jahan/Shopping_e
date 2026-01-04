@@ -22,38 +22,38 @@ function renderCart() {
     total += itemTotal;
 
     cartContainer.innerHTML += `
-      <div class="row align-items-center border-bottom py-4">
-        <div class="col-md-2">
+      <div class="row align-items-center border-bottom py-4 cart_row">
+        <div class="col-3 col-sm-2 cart_image">
           <img src="${item.image}" class="img-fluid">
         </div>
 
-        <div class="col-md-3">
-          <h5>${item.name}</h5>
+        <div class=" col-5 col-sm-3  cart_title">
+          <h5 class="mb-0">${item.name}</h5>
         </div>
 
-        <div class="col-md-2">
+        <div class="cart_price col-3 col-sm-2">
           $${item.price}
         </div>
 
-        <div class="col-md-3 d-flex align-items-center gap-2">
+        <div class="col-4 col-sm-2 d-flex align-items-center gap-2">
           <button class="btn btn-sm btn-outline-secondary" onclick="changeQty(${index}, -1)">−</button>
-          <span>${item.quantity}</span>
+          <span class="count_number">${item.quantity}</span>
           <button class="btn btn-sm btn-outline-secondary" onclick="changeQty(${index}, 1)">+</button>
         </div>
 
-        <div class="col-md-1 fw-bold">
+        <div class="col-3 col-sm-2  fw-bold d_price">
           $${itemTotal.toFixed(2)}
         </div>
 
-        <div class="col-md-1">
-          <button class="btn btn-sm btn-danger" onclick="removeItem(${index})">✕</button>
+        <div class="col-3 col-sm-1 cross">
+          <button class="btn btn-sm btn-danger" onclick="removeItem(${index})"  style="background-color:#ff523b;">✕</button>
         </div>
       </div>
     `;
   });
 
   cartContainer.innerHTML += `
-    <div class="text-end mt-4">
+    <div class="total_prc text-end mt-4">
       <h4>Total: $${total.toFixed(2)}</h4>
     </div>
   `;
