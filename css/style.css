@@ -638,7 +638,7 @@ body {
 
 .footer_app_img_area {
     display: flex;
-    g9
+    gap: 9px;
 }
 
 .footer_app_img {
