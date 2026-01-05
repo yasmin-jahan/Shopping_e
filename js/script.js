@@ -71,40 +71,13 @@ $(document).ready(function () {
   });
 }
   
-    //scroll_header
-  window.addEventListener("scroll", function() {
-  const header = document.querySelector(".header_section");
-  if (window.scrollY > 30) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-});
+ 
 
 
-  //menu
-  // Menu button click
-    document.querySelector(".menu").addEventListener("click", () => {
-    document.querySelector(".header_nav").classList.add("header_mobile_nav_active");
-    document.querySelector(".black_overlay").style.display = "block";
-
-  });
-
-  // Close button click
-    document.querySelector(".close-btn").addEventListener("click", () => {
-    document.querySelector(".header_nav").classList.remove("header_mobile_nav_active");
-    document.querySelector(".black_overlay").style.display = "none";
-  });
-
-  // Black overlay click
-    document.querySelector(".black_overlay").addEventListener("click", () => {
-      document.querySelector(".header_nav").classList.remove("header_mobile_nav_active");
-      document.querySelector(".black_overlay").style.display = "none";
-    });
 
 
   // product-details-slider
-  var swiper = new Swiper(".product_details_mySwiper", {
+  var swiper2 = new Swiper(".product_details_mySwiper", {
       spaceBetween: 10,
       slidesPerView: 4,
       freeMode: true,
@@ -138,6 +111,35 @@ $(document).ready(function () {
   });
 
 });
+   //scroll_header
+  window.addEventListener("scroll", function() {
+  const header = document.querySelector(".header_section");
+  if (window.scrollY > 30) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+});
+
+  //menu
+  // Menu button click
+    document.querySelector(".menu").addEventListener("click", () => {
+    document.querySelector(".header_nav").classList.add("header_mobile_nav_active");
+    document.querySelector(".black_overlay").style.display = "block";
+
+  });
+
+  // Close button click
+    document.querySelector(".close-btn").addEventListener("click", () => {
+    document.querySelector(".header_nav").classList.remove("header_mobile_nav_active");
+    document.querySelector(".black_overlay").style.display = "none";
+  });
+
+  // Black overlay click
+    document.querySelector(".black_overlay").addEventListener("click", () => {
+      document.querySelector(".header_nav").classList.remove("header_mobile_nav_active");
+      document.querySelector(".black_overlay").style.display = "none";
+    });
 
 function updateCartCount() {
   const cartCountEl = document.querySelector(".cart_item_count");

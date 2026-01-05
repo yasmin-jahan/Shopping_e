@@ -50,25 +50,25 @@ const products = [
 ];
 
 
-// Run ONLY if the product details container exists
-const productContainer = document.querySelector(".product_details_content");
-if (productContainer) {
-  const params = new URLSearchParams(window.location.search);
-  const productId = Number(params.get("id"));
+// // Run ONLY if the product details container exists
+// const productContainer = document.querySelector(".product_details_content");
+// if (productContainer) {
+//   const params = new URLSearchParams(window.location.search);
+//   const productId = Number(params.get("id"));
 
-  const product = products.find(item => item.id === productId);
+//   const product = products.find(item => item.id === productId);
 
-  if (!product) {
-    productContainer.innerHTML = "<h2 style='text-align:center'>Product not found</h2>";
-  } else {
-    productContainer.querySelector("h2").innerHTML = `${product.name} <span>By HRX</span>`;
-    productContainer.querySelector(".price span").innerText = `$${product.price}`;
-    productContainer.querySelector("p").innerText = product.desc;
+//   if (!product) {
+//     productContainer.innerHTML = "<h2 style='text-align:center'>Product not found</h2>";
+//   } else {
+//     productContainer.querySelector("h2").innerHTML = `${product.name} <span>By HRX</span>`;
+//     productContainer.querySelector(".price span").innerText = `$${product.price}`;
+//     productContainer.querySelector("p").innerText = product.desc;
 
-    document.querySelectorAll(".product_details_swiper_slide img").forEach(img => {
-      img.src = product.image;
-    });
+//     document.querySelectorAll(".product_details_swiper_slide img").forEach(img => {
+//       img.src = product.image;
+//     });
 
-    window.currentProduct = product; // for Add to Cart
-  }
-}
+//     window.currentProduct = product; // for Add to Cart
+//   }
+// }

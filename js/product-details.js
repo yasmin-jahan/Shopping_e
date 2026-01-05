@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
+//add to cart
 function addToCart() {
   if (!window.currentProduct) return;
 
@@ -68,7 +68,7 @@ function addToCart() {
       price: window.currentProduct.price,
       quantity: quantity,
 
-      // ✅ THIS IS THE IMPORTANT LINE
+      //  THIS IS THE IMPORTANT LINE
       image: window.currentProduct.image || window.currentProduct.images?.[0]
     });
   }
