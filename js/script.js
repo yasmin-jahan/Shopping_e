@@ -77,13 +77,13 @@ $(document).ready(function () {
 
 
   // product-details-slider
-  var swiper2 = new Swiper(".product_details_mySwiper", {
+  var swiper = new Swiper(".product_details_mySwiper", {
       spaceBetween: 10,
       slidesPerView: 4,
       freeMode: true,
       watchSlidesProgress: true,
     });
-    var swiper2 = new Swiper(".product_details_mySwiper2", {
+    var swiper = new Swiper(".product_details_mySwiper2", {
       spaceBetween: 10,
       navigation: {
         nextEl: ".product_details_next",
