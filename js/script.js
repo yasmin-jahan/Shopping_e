@@ -80,10 +80,12 @@ $(document).ready(function () {
   var swiper = new Swiper(".product_details_mySwiper", {
       spaceBetween: 10,
       slidesPerView: 4,
-      freeMode: true,
-      watchSlidesProgress: true,
+       watchSlidesProgress: true,
+  slideToClickedSlide: true,
+  freeMode: false,
+  watchOverflow: true,
     });
-    var swiper = new Swiper(".product_details_mySwiper2", {
+    var swiper2 = new Swiper(".product_details_mySwiper2", {
       spaceBetween: 10,
       navigation: {
         nextEl: ".product_details_next",
