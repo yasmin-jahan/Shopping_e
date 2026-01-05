@@ -909,6 +909,13 @@ body {
     font-size: 16px;
     font-weight: 400;
 }
+.product_details_mySwiper {
+  overflow: hidden;
+}
+
+.product_details_mySwiper .swiper-slide {
+  pointer-events: auto;
+}
 
 /************************* product details page ends *****************************/
 
